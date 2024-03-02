@@ -66,61 +66,49 @@ of the specified type removed.
 debugger
 function eliminateType(arr) {
 
+
   return function(type) {
-    let result = [];
+    let results = [];
     if ( type === 'object' ) {
-      arr.forEach(el => {
-        if ( typeof el !== type ) {
-          result.push(el);
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
         }
       });
-      return result;
-
+      return results;
     } else if ( type === 'number' ) {
-      arr.forEach(el => {
-        if ( typeof el !== type ) {
-          result.push(el);
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
         }
       });
-      return result;
-
+      return results;
     } else if ( type === 'string' ) {
-      arr.forEach(el => {
-        if ( typeof el !== type ) {
-          result.push(el);
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
         }
       });
-      return result;
-
+      return results;
     } else if ( type === 'boolean' ) {
-      arr.forEach(el => {
-        if ( typeof el !== type ) {
-          result.push(el);
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
         }
       });
-      return result;
-
-    } else if ( type === 'undefined') {
-      arr.forEach(el => {
-        if ( typeof el !== type ) {
-          result.push(el);
+      return results;
+    } else if ( type === 'undefined' ) {
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
         }
       });
-      return result;
-
+      return results;
     }
-
   }
 
+
 }
-
-const smallEliminate = eliminateType([1, 'one', 2, 'two', 3, 'three']);
-smallEliminate('number'); // ['one', 'two', 'three']
-smallEliminate('string'); // [1, 2, 3]
-
-const eliminate = eliminateType([2, undefined, 'world', { color: 'red' }, true, 3, [4, 5], 'hello', false]);
-eliminate('number'); // [undefined, 'world', { color: 'red' }, true, [4, 5], 'hello', false]
-eliminate('object'); // [2, undefined, 'world', true, 3, 'hello', false]
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
