@@ -48,10 +48,66 @@ Hint: Remember Polya's problem solving framework!
   * If your brute-force solution passess tests, try refactoring for simplicity
   * It's possible (not mandatory) to solve this in 1-3 lines of code!
 
-***********************************************************************/
 
+Write a function called `eliminateType` which takes in an array of elements
+that could be of any type and returns a function. The return function should
+accept a string that could be any of the following types:
+
+- 'object'
+- 'number'
+- 'string'
+- 'boolean'
+- 'undefined'
+
+The return function should return a copy of the input array with all elements
+of the specified type removed.
+
+***********************************************************************/
+debugger
 function eliminateType(arr) {
-  // Your code here 
+
+
+  return function(type) {
+    let results = [];
+    if ( type === 'object' ) {
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
+        }
+      });
+      return results;
+    } else if ( type === 'number' ) {
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
+        }
+      });
+      return results;
+    } else if ( type === 'string' ) {
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
+        }
+      });
+      return results;
+    } else if ( type === 'boolean' ) {
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
+        }
+      });
+      return results;
+    } else if ( type === 'undefined' ) {
+      arr.forEach(element => {
+        if ( typeof element !== type ) {
+          results.push(element);
+        }
+      });
+      return results;
+    }
+  }
+
+
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
